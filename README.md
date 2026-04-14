@@ -81,6 +81,16 @@
 - 체스보드 패턴이 정확히 검출되어야 pose estimation이 안정적으로 수행된다.
 - 캘리브레이션 결과가 정확할수록 AR 객체가 더 자연스럽게 정렬된다.
 
+## 추가 실험 (Additional Experiment)
+
+체스보드 위에 단순한 도형 대신, 투명 배경의 캐릭터 이미지를 활용하여 AR 객체를 시각화하는 실험을 진행하였다.
+
+GIF 이미지의 배경을 제거하기 위해 Python 코드(Pillow, NumPy)를 이용하여 투명 배경 처리를 수행한 후, 해당 이미지를 체스보드 위에 배치하였다.
+
+3D 모델은 아니지만, 카메라 pose estimation 결과를 이용해 체스보드 위 특정 위치에 캐릭터가 서 있는 것처럼 보이도록 구현하였다.
+
+![miku](result/miku_experiment.png)ㄴ
+
 ## Description
 
 AR object visualization using camera pose estimation with OpenCV.
